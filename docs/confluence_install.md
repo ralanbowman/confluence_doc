@@ -30,12 +30,12 @@ You should be able to hand this install guide to someone with moderate to advanc
 &nbsp; &nbsp; [Set the MySQL root password](#set-the-mysql-root-password)  
 
 [Installing Confluence](#installing-confluence)  
-&nbsp; &nbsp; [Download the Confluence installer from Atlassian](#download-the-confluence-installer-from-atlassian)  
-&nbsp; &nbsp; [Set the installer as an executable](#set-the-installer-as-an-executable)  
-&nbsp; &nbsp; [Run the installer - follow the prompts](#run-the-installer---follow-the-prompts)  
-&nbsp; &nbsp; [Set up the MySQL database for Confluence](#set-up-the-mysql-database-for-confluence)  
-&nbsp; &nbsp; [Move to the browser-based installer (this is where you install the license)](#move-to-the-browser-based-installer-this-is-where-you-install-the-license)  
-&nbsp; &nbsp; [Enjoy using Confluence](#enjoy-using-confluence)  
+&nbsp; &nbsp; [1. Download the Confluence installer from Atlassian](#download-the-confluence-installer-from-atlassian)  
+&nbsp; &nbsp; [2. Set the installer as an executable](#set-the-installer-as-an-executable)  
+&nbsp; &nbsp; [3. Run the installer - follow the prompts](#run-the-installer---follow-the-prompts)  
+&nbsp; &nbsp; [4. Set up the MySQL database for Confluence](#set-up-the-mysql-database-for-confluence)  
+&nbsp; &nbsp; [5. Move to the browser-based installer (this is where you install the license)](#move-to-the-browser-based-installer-this-is-where-you-install-the-license)  
+&nbsp; &nbsp; [6. Enjoy using Confluence](#enjoy-using-confluence)  
 
 [Addendum: A Very Short Vim Tutorial](#addendum---a-very-short-vim-tutorial)  
 
@@ -118,7 +118,7 @@ The steps to install Confluence are:
 5. Move to the browser-based installer (this is where you install the license)
 6. Enjoy using Confluence
 
-### Download the Confluence installer from Atlassian
+### 1. Download the Confluence installer from Atlassian
 
 The Confluence installers are here: [Confluence installers](https://www.atlassian.com/software/confluence/download "Confluence Installers"). The page will default to the OS you're currently using, so make sure to select the Linux tab. What you're going to want to do is get the link to the installer so that you can download it directly to the server where you're installing Confluence. You could download the installer to your local computer and then upload it to the server, but that requires an unnecessary extra step.
 
@@ -137,7 +137,7 @@ This example uses the URL of the current (2015-02-20) Confluence installer, the 
 
 This will download the Confluence installer to your server. Depending on your connection speed, network traffic, etc, this may take a few minutes. You'll know that the download is complete when you're returned to the command prompt.
 
-### Set the installer as an executable
+### 2. Set the installer as an executable
 
 By default, the Confluence installer isn't executable, meaning you cannot run the installer program. This is by design, and done for security reasons. You will need to set the installer to executable with the **`chmod +x atlassian-confluence-5.7-x64.bin`** command.
 
@@ -147,7 +147,7 @@ By default, the Confluence installer isn't executable, meaning you cannot run th
 [root@example ~]# chmod +x atlassian-confluence-5.7-x64.bin
 ```
 
-### Run the installer - follow the prompts
+### 3. Run the installer - follow the prompts
 
 Once the installer has been set to executable, you can run the installer program, and follow the prompts to install Confluence. Generally speaking you can just accept the defaults for each choice. I've installed Confluence a dozen times or so, and I've never strayed from the defaults.
 
@@ -206,7 +206,7 @@ Finishing installation ...
 
 After the install completes, you will need to move on to the MySQL database configuration before finishing the rest of the Confluence setup from the browser.
 
-### Set up the MySQL database for Confluence
+### 4. Set up the MySQL database for Confluence
 
 In this section you will start the MySQL database server, secure it, and create the database that Confluence will use. You will also add some settings to the file that controls some of the variables that MySQL uses.
 
@@ -286,7 +286,7 @@ Once you have made these changes, save and exit the file, and restart the MySQL 
 ```
 This ends the command line install part of Confluence. The rest of the install process takes place in the browser.
 
-### Move to the browser-based installer (this is where you install the license)
+### 5. Move to the browser-based installer (this is where you install the license)
 
 (My notes here aren't as detailed, because I've installed Confluence quite a few times and this part is pretty self-explanatory to me by now)
 
@@ -305,7 +305,7 @@ This takes a few minutes to run. If there is a problem, it will error out almost
 
 This should complete the Confluence installation.
 
-### Enjoy using Confluence
+### 6. Enjoy using Confluence
 
 From this point onward you should be able to use Confluence.
 
