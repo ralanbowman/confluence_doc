@@ -30,12 +30,12 @@ You should be able to hand this install guide to someone with moderate to advanc
 &nbsp; &nbsp; [Set the MySQL root password](#set-the-mysql-root-password)  
 
 [Installing Confluence](#installing-confluence)  
-&nbsp; &nbsp; [1. Download the Confluence installer from Atlassian](#download-the-confluence-installer-from-atlassian)  
-&nbsp; &nbsp; [2. Set the installer as an executable](#set-the-installer-as-an-executable)  
-&nbsp; &nbsp; [3. Run the installer - follow the prompts](#run-the-installer---follow-the-prompts)  
-&nbsp; &nbsp; [4. Set up the MySQL database for Confluence](#set-up-the-mysql-database-for-confluence)  
-&nbsp; &nbsp; [5. Move to the browser-based installer (this is where you install the license)](#move-to-the-browser-based-installer-this-is-where-you-install-the-license)  
-&nbsp; &nbsp; [6. Enjoy using Confluence](#enjoy-using-confluence)  
+&nbsp; &nbsp; [1. Download the Confluence installer from Atlassian](#1-download-the-confluence-installer-from-atlassian)  
+&nbsp; &nbsp; [2. Set the installer as an executable](#2-set-the-installer-as-an-executable)  
+&nbsp; &nbsp; [3. Run the installer - follow the prompts](#3-run-the-installer---follow-the-prompts)  
+&nbsp; &nbsp; [4. Set up the MySQL database for Confluence](#4-set-up-the-mysql-database-for-confluence)  
+&nbsp; &nbsp; [5. Move to the browser-based installer (this is where you install the license)](#5-move-to-the-browser-based-installer-this-is-where-you-install-the-license)  
+&nbsp; &nbsp; [6. Enjoy using Confluence](#6-enjoy-using-confluence)  
 
 [Addendum: A Very Short Vim Tutorial](#addendum---a-very-short-vim-tutorial)  
 
