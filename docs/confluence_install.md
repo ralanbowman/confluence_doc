@@ -21,7 +21,7 @@ You will also need:
 
 This install guide assumes that you are able to connect to the command line of the server using an SSH client, work as the root user, and are able to navigate the Linux file system, install and configure software, and edit files using a text editor. I realize that you may not have all these skills, so I will try and explain as much as I can without getting bogged down into too much detail. I can answer any questions you may have about the specifics of certain commands if needed.
 
-**NOTE** - in this install guide I show examples of editing files using the [Vim](http://www.vim.org/ "Vim") text editor. Vim is a highly configurable text editor often used by programmers and system administrators. At the end of this document is a [quick tutorial on using Vim](#addendum-a-very-short-vim-tutorial) that should cover most of what you need to do. If Vim is too complex (and it is a very complex piece of software), see if your server has `nano` or `pico` installed, which are more user-friendly. 
+**NOTE** - in this install guide I show examples of editing files using the [Vim](http://www.vim.org/ "Vim") text editor. Vim is a highly configurable text editor often used by programmers and system administrators. At the end of this document is a [quick tutorial on using Vim](#addendum---a-very-short-vim-tutorial) that should cover most of what you need to do. If Vim is too complex (and it is a very complex piece of software), see if your server has `nano` or `pico` installed, which are more user-friendly. 
 
 You should be able to hand this install guide to someone with moderate to advanced Linux skills and they should be able to follow along with no issues.
 
@@ -86,7 +86,7 @@ This is done before installing Confluence so that the database server is secure 
 
 Change directories to the */root* directory, and create a file called ***.my.cnf***. Note the dot (.) at the beginning of the file name. Create the file using the **`touch`** command, and then edit it using a text editor (vim in this example). 
 
-```bash
+```sh
 [root@example ~]# cd /root
 [root@example ~]# touch .my.cnf
 [root@example ~]# vim .my.cnf
@@ -94,7 +94,7 @@ Change directories to the */root* directory, and create a file called ***.my.cnf
 
 Add this info to the .my.cnf file, and save and exit.
 
-```bash
+```sh
 [client]
 password=secure_password
 ```
@@ -128,7 +128,7 @@ Right-click on the Trial download button, and select the option that lets you *C
 
 Connect to the server using SSH, and as the root user change directories to the */tmp* directory (note the leading slash). Then use the **`wget`** command to download the installer. You should be able to type in **`wget`**, a space, and then paste the link address into the command prompt.
 
-```bash
+```sh
 [root@example ~]# cd /tmp
 [root@example ~]# wget https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-5.7-x64.bin
 ```
@@ -143,7 +143,7 @@ By default, the Confluence installer isn't executable, meaning you cannot run th
 
 **NOTE** - the intricacies of UNIX/Linux file permissions are too esoteric to get into here. This is a quick overview: [Unix - File Permissions](https://www.tutorialspoint.com/unix/unix-file-permission.htm "Unix File Permissions"). If you're really interested I'll be glad to go into more detail, but the "how" is only relevant here, not the "why".
 
-```bash
+```sh
 [root@example ~]# chmod +x atlassian-confluence-5.7-x64.bin
 ```
 
@@ -155,7 +155,7 @@ Start the install process with the **`./atlassian-confluence-5.7-x64.bin`** comm
 
 This is an example of what you will see during the install process. What's inside the angle brackets and is what you'll type at the prompt whenever the system asks you for an action. For example, < o, Enter > means to press the letter o and then press Enter.
 
-```bash
+```sh
 [root@example ~]# ./atlassian-confluence-5.7-x64.bin
 Unpacking JRE ...
 Starting Installer ...
@@ -214,13 +214,13 @@ You will need the MySQL root password that you set in the [Set the MySQL root pa
 
 Start the MySQL database server with the **`service mysqld start`** command. Note the **d** at the end - **mysqld**.
 
-```bash
+```sh
 [root@example ~]# service mysqld start
 ```
 
 If this is the first time that the MySQL database server has run, there will be a lot of output generated on the screen. Wait until you are returned to the command prompt, and then run the following command to secure the MySQL server: **`/usr/bin/mysql_secure_installation`**
 
-```bash
+```sh
 [root@example ~]# /usr/bin/mysql_secure_installation
 ```
 
@@ -241,7 +241,7 @@ The commands you will need to use are as follows. An example of how this will lo
 * **`CREATE DATABASE confluence CHARACTER SET utf8 COLLATE utf8_bin;`** - this creates the actual database, called confluence
 * **`GRANT ALL PRIVILEGES ON confluence.* TO 'confluence_db_user'@'localhost' IDENTIFIED BY 'secure_password';`** - this creates the database user and sets the password for that user. I tend to use something similar to confluence_db_user or sometimes conf_db_user.
 
-```bash
+```sh
 [root@example ~]# mysql -u root -p
 Enter password:
 
@@ -265,7 +265,7 @@ mysql> quit;
 
 After you have created the database and database user / password, you will need to edit the file that controls some settings for MySQL. The file is located at */etc/my.cnf*. Note the dot between my and cnf.
 
-```bash
+```sh
 [root@example ~]# cd /etc
 [root@example ~]# vim my.cnf
 ```
@@ -281,7 +281,7 @@ max_allowed_packet=32M
 
 Once you have made these changes, save and exit the file, and restart the MySQL database server with the service mysqld restart command.
 
-```bash
+```sh
 [root@example ~]# service mysqld restart
 ```
 This ends the command line install part of Confluence. The rest of the install process takes place in the browser.
@@ -332,7 +332,7 @@ However, you only need to use a very small set of commands in order to edit the 
 
 To open a file for editing, use the **`vim name_of_file`** command from the command prompt. For example, to open the **`.my.cnf`** file: 
 
-```bash
+```sh
 vim .my.cnf
 ```
 
@@ -353,7 +353,7 @@ Once you've added your text or made your changes to the file you can save and ex
 <br />
 If you're interested in learning how to use Vim, there is a built-in tutorial called **`vimtutor`** that you can access from the command line: 
 
-```bash
+```sh
 [root@example ~]# vimtutor
 ```
 If you work with Linux or UNIX systems on a regular basis, knowing Vim can be a huge benefit. Even just knowing some of the basics will make your life much easier. 

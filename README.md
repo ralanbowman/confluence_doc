@@ -1,6 +1,8 @@
 # Confluence Install Doc
 
-A member of a technical writer mailing list I’m on wanted to install [Confluence](https://www.atlassian.com/software/confluence "Confluence") to evaluate it as a solution for their customer-facing documentation. They had access to a virtual server, but were stumbling somewhat with the official [Confluence install instructions](https://confluence.atlassian.com/conf57/installing-confluence-on-linux-701435875.html) (Note - they were installing Confluence 5.7, which was the most current version at the time). Having installed Confluence a number of times while I was evaluating it myself, I created an install guide they could use to get started. 
+This install guide was written for a fellow member of a mailing list for technical writers. They wanted to install and evaluate [Confluence](https://www.atlassian.com/software/confluence "Confluence") for their user-facing documentation, but were having problems following the [official documentation](https://confluence.atlassian.com/conf57/installing-confluence-on-linux-701435875.html "Confluence Install docs") and posted on the mailing list asking for help. I had installed Confluence numerous times when my then employer was also evaluating it, so I was able to provide an install guide based on my notes. **Note** - this install guide is based on Confluence 5.7, which was the most current version at the time. 
 
-**My install guide is here: [Confluence Install Guide](docs/confluence_install.md)** 
+I specifically wrote this for someone with only low to moderate skill with Linux and system administration, but tried to keep it high level enough to not get bogged down in the "why" and just concentrate on the "how." 
+
+My install guide is here: [Confluence Install Guide](docs/confluence_install.md) 
 
